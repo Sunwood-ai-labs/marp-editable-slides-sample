@@ -1,7 +1,8 @@
 <div align="center">
   <img src="assets/header.png" alt="Marp Editable Slides">
 
-# 🎯 Marp編集可能スライドサンプル
+# 🎯 Marp Editable Slides Sample
+
 
 [![Stars](https://img.shields.io/github/stars/Sunwood-ai-labs/marp-editable-slides-sample?style=social)](https://github.com/Sunwood-ai-labs/marp-editable-slides-sample/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
