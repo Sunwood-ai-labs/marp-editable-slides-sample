@@ -3,9 +3,24 @@
 
 # 🎯 Marp編集可能スライドサンプル
 
+[![Stars](https://img.shields.io/github/stars/Sunwood-ai-labs/marp-editable-slides-sample?style=social)](https://github.com/Sunwood-ai-labs/marp-editable-slides-sample/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Last Commit](https://img.shields.io/github/last-commit/Sunwood-ai-labs/marp-editable-slides-sample)](https://github.com/Sunwood-ai-labs/marp-editable-slides-sample/commits/main)
+
 </div>
 
 このリポジトリは、[Marp](https://marp.app/)を使用して編集可能なスライドを作成するためのミニマルなサンプルプロジェクトです。
+
+## 💻 技術スタック
+
+- **フレームワーク**
+  - [Marp CLI](https://github.com/marp-team/marp-cli) v4.1.0
+  - [Express](https://expressjs.com/) v4.18.2
+  - [Socket.IO](https://socket.io/) v4.7.2
+
+- **開発ツール**
+  - [Concurrently](https://github.com/open-cli-tools/concurrently)
+  - [Nodemon](https://nodemon.io/)
 
 ## 🚀 特徴
 
