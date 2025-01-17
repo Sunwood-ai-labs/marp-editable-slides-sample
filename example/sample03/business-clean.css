@@ -1,0 +1,140 @@
+/* business-clean.css */
+/* 基本設定 */
+:root {
+    --primary-color: #2C5282;
+    --secondary-color: #4299E1;
+    --accent-color: #90CDF4;
+    --text-color: #2D3748;
+    --background-color: #FFFFFF;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* グローバルスタイル */
+section {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    padding: 40px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* タイトルスライド */
+section.title {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section.title h1 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 0.3em;
+}
+
+section.title h2 {
+    color: var(--accent-color);
+    font-weight: normal;
+}
+
+/* コンテンツスライド */
+section.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* データ表示スライド */
+section.data table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+section.data th,
+section.data td {
+    border: 1px solid var(--accent-color);
+    padding: 12px;
+    text-align: left;
+}
+
+section.data th {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* 引用スライド */
+section.quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+}
+
+section.quote blockquote {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 終了スライド */
+section.closing {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+section.closing h1,
+section.closing h2 {
+    color: white;
+}
+
+/* ヘッダーとフッター */
+header,
+footer {
+    color: var(--text-color);
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+/* リストスタイル */
+ul, ol {
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* コードブロック */
+pre {
+    background: #F7FAFC;
+    border-radius: 4px;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+/* mermaidダイアグラム */
+.mermaid {
+    background: white;
+    padding: 1em;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

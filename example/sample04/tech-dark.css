@@ -1,0 +1,169 @@
+/* tech-dark.css */
+/* 基本設定 */
+:root {
+    --primary-color: #00ff9d;
+    --secondary-color: #00b8ff;
+    --background-dark: #1a1a1a;
+    --code-background: #2d2d2d;
+    --text-color: #e0e0e0;
+    --border-color: #404040;
+    --font-family-code: 'Fira Code', 'Source Code Pro', monospace;
+    --font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* グローバルスタイル */
+section {
+    background: var(--background-dark);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    padding: 40px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* タイトルスライド */
+section.title {
+    background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section.title h1 {
+    font-size: 3em;
+    background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.3em;
+}
+
+/* コードブロック */
+pre {
+    background: var(--code-background);
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em 0;
+    font-family: var(--font-family-code);
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+}
+
+code {
+    font-family: var(--font-family-code);
+    color: #e0e0e0;
+}
+
+/* シンタックスハイライト */
+.hljs-keyword { color: #ff79c6; }
+.hljs-string { color: #f1fa8c; }
+.hljs-comment { color: #6272a4; }
+.hljs-function { color: #50fa7b; }
+.hljs-number { color: #bd93f9; }
+.hljs-operator { color: #ff79c6; }
+.hljs-class { color: #8be9fd; }
+
+/* テーブルスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(45, 45, 45, 0.5);
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: rgba(0, 255, 157, 0.1);
+    color: var(--primary-color);
+}
+
+/* パフォーマンスセクション */
+section.performance {
+    background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+}
+
+/* セキュリティセクション */
+section.security {
+    background: linear-gradient(45deg, #2d2d2d, #1a1a1a);
+}
+
+/* 実装セクション */
+section.implementation {
+    background: linear-gradient(45deg, #1a1a1a, #262626);
+}
+
+/* mermaidダイアグラム */
+.mermaid {
+    background: rgba(45, 45, 45, 0.5);
+    padding: 1em;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* リストスタイル */
+ul, ol {
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
+    list-style-type: none;
+    position: relative;
+}
+
+li::before {
+    content: '▶';
+    color: var(--primary-color);
+    position: absolute;
+    left: -1.2em;
+    font-size: 0.8em;
+}
+
+/* ヘッダーとフッター */
+header,
+footer {
+    color: var(--text-color);
+    opacity: 0.7;
+    font-size: 0.8em;
+}
+
+/* クローズスライド */
+section.closing {
+    background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+    text-align: center;
+}
+
+/* アニメーション効果 */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+section.title {
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+}
+
+/* ページネーション */
+section::after {
+    color: var(--primary-color);
+    font-size: 0.8em;
+}
