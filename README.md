@@ -34,6 +34,37 @@
 - プレゼンターノート対応
 - ファイル監視による自動生成
 
+## 🎨 サンプルテーマ集
+
+様々なユースケースに対応したテーマサンプルを用意しています：
+
+### 🐱 Sample 01: 猫猫カンパニー
+![猫猫カンパニー](example/sample01/images/slides.001.png)
+企業プレゼンテーションを可愛らしい猫テーマで表現したサンプル。
+[詳細を見る](example/sample01/README.md)
+
+### 🎨 Sample 02: ダークレッド＆ティール
+![ダークレッド＆ティール](example/sample02/images/slides.001.png)
+ダークレッドとティールカラーを基調とした現代的なテーマ。
+[詳細を見る](example/sample02/README.md)
+
+### 💼 Sample 03: ビジネスクリーン
+![ビジネスクリーン](example/sample03/images/slides.001.png)
+クリーンでプロフェッショナルなビジネス向けテーマ。
+[詳細を見る](example/sample03/README.md)
+
+### 💻 Sample 04: テックダーク
+![テックダーク](example/sample04/images/slides.001.png)
+技術プレゼンテーションに特化したダークテーマ。
+[詳細を見る](example/sample04/README.md)
+
+### 🎨 Sample 05: ビビッドクリエイティブ
+![ビビッドクリエイティブ](example/sample05/images/slides.001.png)
+クリエイティブな表現のための鮮やかなテーマ。
+[詳細を見る](example/sample05/README.md)
+
+[サンプル一覧をもっと見る](example/README.md)
+
 ## 📦 インストール
 
 ### 1. 依存関係のインストール
