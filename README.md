@@ -1,46 +1,48 @@
-<div align="center">
+<p align="center">
   <img src="assets/header.png" alt="Marp Editable Slides">
+</p>
 
-# 🎯 Marp Editable Slides Sample
+<div align="center">
 
-
-[![Stars](https://img.shields.io/github/stars/Sunwood-ai-labs/marp-editable-slides-sample?style=social)](https://github.com/Sunwood-ai-labs/marp-editable-slides-sample/stargazers)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/Sunwood-ai-labs/marp-editable-slides-sample?style=social)](https://github.com/Sunwood-ai-labs/marp-editable-slides-sample/stargazers)
+[![GitHub license](https://img.shields.io/github/license/Sunwood-ai-labs/marp-editable-slides-sample)](https://github.com/Sunwood-ai-labs/marp-editable-slides-sample/blob/main/LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/Sunwood-ai-labs/marp-editable-slides-sample)](https://github.com/Sunwood-ai-labs/marp-editable-slides-sample/commits/main)
+
+[![Node.js Version](https://img.shields.io/badge/node-v18+-green.svg)](https://nodejs.org/)
+[![Marp CLI](https://img.shields.io/badge/Marp%20CLI-v4.1.0-blue.svg)](https://github.com/marp-team/marp-cli)
+[![LibreOffice](https://img.shields.io/badge/LibreOffice-v7.5+-orange.svg)](https://www.libreoffice.org/)
 
 </div>
 
-このリポジトリは、[Marp](https://marp.app/)を使用して編集可能なスライドを作成するためのミニマルなサンプルプロジェクトです。
+# 🎯 Marp編集可能スライドサンプル
 
-## 💻 技術スタック
+このリポジトリは、[Marp](https://marp.app/)を使用して編集可能なスライドを作成するためのミニマルなサンプルプロジェクトです。マークダウンで作成したスライドをPDF・PowerPointファイルに変換できます。
 
-- **フレームワーク**
-  - [Marp CLI](https://github.com/marp-team/marp-cli) v4.1.0
-  - [Express](https://expressjs.com/) v4.18.2
-  - [Socket.IO](https://socket.io/) v4.7.2
+## 🔧 技術スタック
 
-- **開発ツール**
-  - [Concurrently](https://github.com/open-cli-tools/concurrently)
-  - [Nodemon](https://nodemon.io/)
+- **マークダウンエンジン**: [@marp-team/marpit](https://github.com/marp-team/marpit) v2.6.1
+- **CLI ツール**: [@marp-team/marp-cli](https://github.com/marp-team/marp-cli) v4.1.0
+- **ファイル監視**: [chokidar](https://github.com/paulmillr/chokidar) v3.5.3
+- **PDF/PPTX変換**: [LibreOffice](https://www.libreoffice.org/) v7.5+
+- **動作環境**: Node.js v18.0.0以上
 
 ## 🚀 特徴
 
 - マークダウンでスライド作成
 - PowerPointで編集可能な出力
-- リアルタイムプレビュー
 - PDF出力対応
 - プレゼンターノート対応
+- ファイル監視による自動生成
 
 ## 📦 インストール
 
 ### 1. 依存関係のインストール
 
 ```bash
-# 依存関係のインストール
 npm install
 ```
 
-### 2. LibreOfficeのインストール
+### 2. LibreOfficeのインストール（PowerPoint出力用）
 
 PowerPointで編集可能なファイル（.pptx）を生成するには、LibreOfficeのインストールが必要です：
 
@@ -48,70 +50,45 @@ PowerPointで編集可能なファイル（.pptx）を生成するには、Libre
 2. ダウンロードしたインストーラーを実行
 3. デフォルト設定でインストールを完了
 
-※ LibreOfficeは、PowerPoint形式（.pptx）での出力に必要です。インストールせずにPDF形式やHTML形式での出力は可能です。
+※ LibreOfficeは、PowerPoint形式（.pptx）での出力に必要です。インストールせずにPDF形式での出力は可能です。
 
 ## 🛠️ 使用方法
 
-### スライド編集
+### スライドの作成・編集
 
-1. `slides.md`を任意のテキストエディタで開きます
-2. マークダウン形式でスライドを編集します
-3. 保存すると自動でプレビューが更新されます
+1. `slides.md`を任意のテキストエディタで作成・編集
+2. マークダウン形式でスライドを記述
+3. ビルドコマンドで目的の形式に変換
 
 ### コマンド一覧
 
 ```bash
-# リアルタイムプレビュー
-npm run start
-
-# PDF・PowerPointファイルの生成
+# HTML形式で出力
 npm run build
 
-# PDFのみ生成
+# PDF形式で出力
 npm run build:pdf
 
-# 編集可能なPowerPointのみ生成
+# PowerPoint形式で出力（編集可能）
 npm run build:pptx
 
-# ライブプレビュー（変更の監視）
+# HTML形式でファイル監視（変更時自動生成）
 npm run watch
+
+# PDF形式でファイル監視
+npm run watch:pdf
+
+# PowerPoint形式でファイル監視
+npm run watch:pptx
 ```
 
-### 出力ファイルについて
+### 出力ファイル
 
-各コマンドを実行すると、以下のような出力が表示されます：
+各コマンドを実行すると、以下のようなファイルが生成されます：
 
-```bash
-[  INFO ] Converting 1 markdown...
-[  INFO ] example\sample01\slides.md => example\sample01\slides.pptx
-```
-npx marp slides.md  --pptx --pptx-editabl --theme dark-red-teal.css
-生成されるファイル：
-- `slides.html`：プレビュー用のHTML
+- `slides.html`：HTML形式のスライド
 - `slides.pdf`：PDF形式のスライド
-- `slides.pptx`：PowerPointで編集可能なプレゼンテーション
-
-出力先：
-- すべてのファイルは`example/sample01/`ディレクトリに生成されます
-- 既存のファイルは上書きされます
-- ファイル名は元のMarkdownファイル（`slides.md`）の名前に基づいて生成されます
-
-#### 出力ファイルの特徴
-
-1. **HTML（`slides.html`）**
-   - ブラウザでプレビュー可能
-   - CSSアニメーションが利用可能
-   - プレゼンターノートの表示対応
-
-2. **PDF（`slides.pdf`）**
-   - 印刷用に最適化
-   - 高品質な文字表示
-   - 各スライドが個別ページに
-
-3. **PowerPoint（`slides.pptx`）**
-   - Microsoft PowerPointで編集可能
-   - スライドの微調整が可能
-   - プレゼンテーション効果の追加可能
+- `slides.pptx`：PowerPoint形式のスライド（編集可能）
 
 ## 📝 編集のヒント
 
@@ -157,6 +134,15 @@ theme: default
 marp: true
 theme: gaia  # default, gaia, uncover
 ---
+```
+
+### カスタムCSSの適用
+
+1. CSSファイルを作成（例：`custom-theme.css`）
+2. ビルドコマンドに`--theme`オプションを追加：
+
+```bash
+npx @marp-team/marp-cli slides.md --theme custom-theme.css
 ```
 
 ## 📄 ライセンス

@@ -2,32 +2,24 @@
   "name": "marp-editable-slides-sample",
   "version": "1.0.0",
   "description": "Marpの編集機能を試せるミニマルなサンプルリポジトリ",
-  "main": "src/server.js",
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon server/index.js",
-    "client": "cd client && npm start",
-    "build": "cd client && npm run build",
-    "install-all": "npm install && cd client && npm install"
+    "build": "npx @marp-team/marp-cli slides.md --allow-local-files",
+    "build:pdf": "npx @marp-team/marp-cli slides.md --pdf --allow-local-files",
+    "build:pptx": "npx @marp-team/marp-cli slides.md --pptx --pptx-editable --allow-local-files",
+    "watch": "npx @marp-team/marp-cli slides.md --watch --allow-local-files",
+    "watch:pdf": "npx @marp-team/marp-cli slides.md --watch --pdf --allow-local-files",
+    "watch:pptx": "npx @marp-team/marp-cli slides.md --watch --pptx --pptx-editable --allow-local-files"
   },
   "keywords": [
     "marp",
     "slides",
-    "presentation",
-    "react"
+    "presentation"
   ],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@marp-team/marp-cli": "^4.1.0",
     "@marp-team/marpit": "^2.6.1",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "socket.io": "^4.7.2"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.2",
-    "nodemon": "^3.0.2"
+    "chokidar": "^3.5.3"
   }
 }
